@@ -1,0 +1,6 @@
+time=37970, host_mac=1122, data=0A1B191A0A068C0A, state=OK
+
+time=44050, host_mac=1122, data=0A1B191B0A068C01, state=OK
+
+time=77420, host_mac=CC01, data=0A1B191A0A068C01, state=OK
+

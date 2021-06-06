@@ -1,0 +1,18 @@
+device=host, name=abel, mac=AA03, ip=10.6.122.30
+device=host, name=alejandro, mac=CC01, ip=10.6.140.10
+device=host, name=jean, mac=BB03, ip=10.6.124.70
+device=host, name=mari, mac=AA02, ip=10.6.122.20
+device=host, name=reynaldo, mac=CC02, ip=10.6.140.20
+device=host, name=tamayo, mac=BB01, ip=10.6.124.50
+device=host, name=thaisel, mac=BB02, ip=10.6.124.60
+device=host, name=yeni, mac=AA04, ip=10.6.122.40
+device=host, name=yuri, mac=AA01, ip=10.6.122.10
+device=hub, name=hub_redes, ports_number=4
+device=hub, name=hub_weboo, ports_number=4
+device=router, name=router_etecsa, ports_number=2, mac=[3344, FFFF], ip=[200.55.132.179, 0.0.0.0]
+device=router, name=router_fisica, ports_number=4, mac=[1122, 1133, FFFF, FFFF], ip=[10.6.140.1, 10.6.100.140, 0.0.0.0, 0.0.0.0]
+device=router, name=router_matcom, ports_number=4, mac=[0011, 0022, 0033, FFFF], ip=[10.6.122.1, 10.6.124.1, 10.6.100.122, 0.0.0.0]
+device=router, name=router_uh, ports_number=4, mac=[2233, 2244, 2255, FFFF], ip=[10.6.100.121, 10.6.100.139, 200.55.132.180, 0.0.0.0]
+device=switch, name=switch_fisica, ports_number=4, mac=[FFFF, FFFF, FFFF, FFFF]
+device=switch, name=switch_redes, ports_number=4, mac=[FFFF, FFFF, FFFF, FFFF]
+device=switch, name=switch_weboo, ports_number=4, mac=[FFFF, FFFF, FFFF, FFFF]

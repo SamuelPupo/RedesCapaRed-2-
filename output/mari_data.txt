@@ -1,0 +1,14 @@
+time=15420, host_mac=AA04, data=0A1B191A0A067A01, state=OK
+
+time=24670, host_mac=AA01, data=0A1B191A0A067A01, state=OK
+
+time=55750, host_mac=0011, data=0A1B191A0A067A14, state=OK
+
+time=59020, host_mac=0011, data=0A067A140A068C140000026666, state=OK
+
+time=60740, host_mac=AA03, data=0A067A010A067A1E00010108, state=OK
+
+time=62350, host_mac=AA03, data=0A067A010A067A1E00010108, state=OK
+
+time=67320, host_mac=0011, data=0A067A1E0A067A0100010100, state=OK
+

@@ -1,0 +1,178 @@
+####
+#### creando los hosts
+####
+
+#### hosts en el departamento de redes
+
+10 create host yuri
+11 mac yuri AA01
+12 ip yuri 10.6.122.10 255.255.255.0
+13 route add yuri 10.6.122.0 255.255.255.0 0.0.0.0 1
+14 route add yuri 0.0.0.0 0.0.0.0 10.6.122.1 1
+
+20 create host mari
+21 mac mari AA02
+22 ip mari 10.6.122.20 255.255.255.0
+23 route add mari 10.6.122.0 255.255.255.0 0.0.0.0 1
+24 route add mari 0.0.0.0 0.0.0.0 10.6.122.1 1
+
+30 create host abel
+31 mac abel AA03
+32 ip abel 10.6.122.30 255.255.255.0
+33 route add abel 10.6.122.0 255.255.255.0 0.0.0.0 1
+34 route add abel 0.0.0.0 0.0.0.0 10.6.122.1 1
+
+40 create host yeni
+41 mac yeni AA04
+42 ip yeni 10.6.122.40 255.255.255.0
+43 route add yeni 10.6.122.0 255.255.255.0 0.0.0.0 1
+44 route add yeni 0.0.0.0 0.0.0.0 10.6.122.1 1
+
+#### hosts en weboo
+
+50 create host tamayo
+51 mac tamayo BB01
+52 ip tamayo 10.6.124.50 255.255.255.0
+53 route add tamayo 10.6.124.0 255.255.255.0 0.0.0.0 1
+54 route add tamayo 0.0.0.0 0.0.0.0 10.6.124.1 1
+
+60 create host thaisel
+61 mac thaisel BB02
+62 ip thaisel 10.6.124.60 255.255.255.0
+63 route add thaisel 10.6.124.0 255.255.255.0 0.0.0.0 1
+64 route add thaisel 0.0.0.0 0.0.0.0 10.6.124.1 1
+
+70 create host jean
+71 mac jean BB03
+72 ip jean 10.6.124.70 255.255.255.0
+73 route add jean 10.6.124.0 255.255.255.0 0.0.0.0 1
+74 route add jean 0.0.0.0 0.0.0.0 10.6.124.1 1
+
+#### hosts en fisica
+
+80 create host alejandro
+81 mac alejandro CC01
+82 ip alejandro 10.6.140.10 255.255.255.0
+83 route add alejandro 10.6.140.0 255.255.255.0 0.0.0.0 1
+84 route add alejandro 0.0.0.0 0.0.0.0 10.6.140.1 1
+
+90 create host reynaldo
+91 mac reynaldo CC02
+92 ip reynaldo 10.6.140.20 255.255.255.0
+93 route add reynaldo 10.6.140.0 255.255.255.0 0.0.0.0 1
+94 route add reynaldo 0.0.0.0 0.0.0.0 10.6.140.1 1
+
+
+####
+#### creando dispositivos
+####
+
+#### hubs
+
+100 create hub hub_redes 4
+110 create hub hub_weboo 4
+
+#### switches
+
+120 create switch switch_redes 4
+130 create switch switch_weboo 4
+140 create switch switch_fisica 4
+
+#### routers
+
+150 create router router_matcom 4
+151 mac router_matcom:1 0011
+152 mac router_matcom:2 0022
+153 mac router_matcom:3 0033
+154 ip router_matcom:1 10.6.122.1 255.255.255.0
+155 ip router_matcom:2 10.6.124.1 255.255.255.0
+156 ip router_matcom:3 10.6.100.122 255.255.255.0
+157 route add router_matcom 10.6.122.0 255.255.255.0 0.0.0.0 1
+158 route add router_matcom 10.6.124.0 255.255.255.0 0.0.0.0 2
+159 route add router_matcom 0.0.0.0 0.0.0.0 10.6.100.121 3
+
+# 157 -> ruta hacia la subred del departamento de redes
+# 158 -> ruta hacia la subred de weboo
+# 159 -> ruta por defecto hacia la UH
+
+160 create router router_fisica 4
+161 mac router_fisica:1 1122
+162 mac router_fisica:2 1133
+163 ip router_fisica:1 10.6.140.1 255.255.255.0
+164 ip router_fisica:2 10.6.100.140 255.255.255.0
+165 route add router_fisica 10.6.140.0 255.255.255.0 0.0.0.0 1
+166 route add router_fisica 0.0.0.0 0.0.0.0 10.6.100.139 2
+
+# 165 -> ruta hacia el laboratorio de fisica
+# 166 -> ruta por defecto hacia la UH
+
+170 create router router_uh 4
+171 mac router_uh:1 2233
+172 mac router_uh:2 2244
+173 mac router_uh:3 2255
+174 ip router_uh:1 10.6.100.121 255.255.255.0
+175 ip router_uh:2 10.6.100.139 255.255.255.0
+176 ip router_uh:3 200.55.132.180 255.255.255.0
+177 route add router_uh 10.6.122.0 255.255.255.0 10.6.100.122 1
+178 route add router_uh 10.6.124.0 255.255.255.0 10.6.100.122 1
+179 route add router_uh 10.6.140.0 255.255.255.0 10.6.100.140 2
+180 route add router_uh 0.0.0.0 0.0.0.0 200.55.132.179 3
+
+# 177 -> ruta 1 de matcom (se va por la interfaz 1)
+# 178 -> ruta 2 de matcom (tambein se va por la interfaz 1)
+# 179 -> ruta de fisica (se va por la interfaz 2)
+# 180 -> ruta por defecto (hacia etecsa, hacia INTERNET, se va por la interfaz 3)
+
+190 create router router_etecsa 2
+191 mac router_etecsa:1 3344
+192 ip router_etecsa:1 200.55.132.179 255.255.255.0
+193 route add router_etecsa 200.55.132.180 255.255.255.255 200.55.132.180 1
+
+# 193 -> ruta de las cosas que "entran" a la UH desde etecsa
+
+####
+#### conectando cables
+####
+
+#### cables en redes
+
+200 connect yuri_1 hub_redes_1
+210 connect mari_1 hub_redes_2
+220 connect abel_1 switch_redes_1
+230 connect yeni_1 switch_redes_2
+240 connect hub_redes_3 switch_redes_3
+
+#### cables en weboo
+
+250 connect tamayo_1 hub_weboo_1
+260 connect thaisel_1 hub_weboo_2
+270 connect jean_1 switch_weboo_1
+280 connect hub_weboo_3 switch_weboo_2
+
+#### cables en labortorio fisica
+
+290 connect alejandro_1 switch_fisica_1
+300 connect reynaldo_1 switch_fisica_2
+
+#### cables en los servidores (matcom, fisica, uh)
+
+310 connect switch_redes_4 router_matcom_1
+320 connect switch_weboo_3 router_matcom_2
+330 connect switch_fisica_3 router_fisica_1
+340 connect router_matcom_3 router_uh_1
+350 connect router_fisica_2 router_uh_2
+360 connect router_uh_3 router_etecsa_1
+
+
+# TEST
+400 send_packet tamayo 10.6.124.60 1111
+4700 send_packet jean 10.6.124.50 2222
+9000 send_packet thaisel 10.6.124.70 3333
+14000 send_packet yeni 10.6.124.70 4444
+23400 send_packet yuri 10.6.140.10 5555
+41200 send_packet reynaldo 10.6.122.20 6666
+
+59000 ping abel 10.6.122.1
+67500 ping router_uh:3 200.55.132.179
+
+76000 send_packet alejandro 200.55.132.170 7777

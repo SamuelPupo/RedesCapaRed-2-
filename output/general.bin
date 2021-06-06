@@ -1,0 +1,108 @@
+time=10, instruction=create, device=host, name=yuri
+time=11, instruction=mac, device=yuri, address=AA01
+time=12, instruction=ip, device=yuri, address=10.6.122.10, mask=255.255.255.0
+time=13, instruction=route_add, device=yuri, details=['10.6.122.0', '255.255.255.0', '0.0.0.0', '1']
+time=14, instruction=route_add, device=yuri, details=['0.0.0.0', '0.0.0.0', '10.6.122.1', '1']
+time=20, instruction=create, device=host, name=mari
+time=21, instruction=mac, device=mari, address=AA02
+time=22, instruction=ip, device=mari, address=10.6.122.20, mask=255.255.255.0
+time=23, instruction=route_add, device=mari, details=['10.6.122.0', '255.255.255.0', '0.0.0.0', '1']
+time=24, instruction=route_add, device=mari, details=['0.0.0.0', '0.0.0.0', '10.6.122.1', '1']
+time=30, instruction=create, device=host, name=abel
+time=31, instruction=mac, device=abel, address=AA03
+time=32, instruction=ip, device=abel, address=10.6.122.30, mask=255.255.255.0
+time=33, instruction=route_add, device=abel, details=['10.6.122.0', '255.255.255.0', '0.0.0.0', '1']
+time=34, instruction=route_add, device=abel, details=['0.0.0.0', '0.0.0.0', '10.6.122.1', '1']
+time=40, instruction=create, device=host, name=yeni
+time=41, instruction=mac, device=yeni, address=AA04
+time=42, instruction=ip, device=yeni, address=10.6.122.40, mask=255.255.255.0
+time=43, instruction=route_add, device=yeni, details=['10.6.122.0', '255.255.255.0', '0.0.0.0', '1']
+time=44, instruction=route_add, device=yeni, details=['0.0.0.0', '0.0.0.0', '10.6.122.1', '1']
+time=50, instruction=create, device=host, name=tamayo
+time=51, instruction=mac, device=tamayo, address=BB01
+time=52, instruction=ip, device=tamayo, address=10.6.124.50, mask=255.255.255.0
+time=53, instruction=route_add, device=tamayo, details=['10.6.124.0', '255.255.255.0', '0.0.0.0', '1']
+time=54, instruction=route_add, device=tamayo, details=['0.0.0.0', '0.0.0.0', '10.6.124.1', '1']
+time=60, instruction=create, device=host, name=thaisel
+time=61, instruction=mac, device=thaisel, address=BB02
+time=62, instruction=ip, device=thaisel, address=10.6.124.60, mask=255.255.255.0
+time=63, instruction=route_add, device=thaisel, details=['10.6.124.0', '255.255.255.0', '0.0.0.0', '1']
+time=64, instruction=route_add, device=thaisel, details=['0.0.0.0', '0.0.0.0', '10.6.124.1', '1']
+time=70, instruction=create, device=host, name=jean
+time=71, instruction=mac, device=jean, address=BB03
+time=72, instruction=ip, device=jean, address=10.6.124.70, mask=255.255.255.0
+time=73, instruction=route_add, device=jean, details=['10.6.124.0', '255.255.255.0', '0.0.0.0', '1']
+time=74, instruction=route_add, device=jean, details=['0.0.0.0', '0.0.0.0', '10.6.124.1', '1']
+time=80, instruction=create, device=host, name=alejandro
+time=81, instruction=mac, device=alejandro, address=CC01
+time=82, instruction=ip, device=alejandro, address=10.6.140.10, mask=255.255.255.0
+time=83, instruction=route_add, device=alejandro, details=['10.6.140.0', '255.255.255.0', '0.0.0.0', '1']
+time=84, instruction=route_add, device=alejandro, details=['0.0.0.0', '0.0.0.0', '10.6.140.1', '1']
+time=90, instruction=create, device=host, name=reynaldo
+time=91, instruction=mac, device=reynaldo, address=CC02
+time=92, instruction=ip, device=reynaldo, address=10.6.140.20, mask=255.255.255.0
+time=93, instruction=route_add, device=reynaldo, details=['10.6.140.0', '255.255.255.0', '0.0.0.0', '1']
+time=94, instruction=route_add, device=reynaldo, details=['0.0.0.0', '0.0.0.0', '10.6.140.1', '1']
+time=100, instruction=create, device=hub, name=hub_redes, ports_number=4
+time=110, instruction=create, device=hub, name=hub_weboo, ports_number=4
+time=120, instruction=create, device=switch, name=switch_redes
+time=130, instruction=create, device=switch, name=switch_weboo
+time=140, instruction=create, device=switch, name=switch_fisica
+time=150, instruction=create, device=router, name=router_matcom
+time=151, instruction=mac, device=router_matcom:1, address=0011
+time=152, instruction=mac, device=router_matcom:2, address=0022
+time=153, instruction=mac, device=router_matcom:3, address=0033
+time=154, instruction=ip, device=router_matcom:1, address=10.6.122.1, mask=255.255.255.0
+time=155, instruction=ip, device=router_matcom:2, address=10.6.124.1, mask=255.255.255.0
+time=156, instruction=ip, device=router_matcom:3, address=10.6.100.122, mask=255.255.255.0
+time=157, instruction=route_add, device=router_matcom, details=['10.6.122.0', '255.255.255.0', '0.0.0.0', '1']
+time=158, instruction=route_add, device=router_matcom, details=['10.6.124.0', '255.255.255.0', '0.0.0.0', '2']
+time=159, instruction=route_add, device=router_matcom, details=['0.0.0.0', '0.0.0.0', '10.6.100.121', '3']
+time=160, instruction=create, device=router, name=router_fisica
+time=161, instruction=mac, device=router_fisica:1, address=1122
+time=162, instruction=mac, device=router_fisica:2, address=1133
+time=163, instruction=ip, device=router_fisica:1, address=10.6.140.1, mask=255.255.255.0
+time=164, instruction=ip, device=router_fisica:2, address=10.6.100.140, mask=255.255.255.0
+time=165, instruction=route_add, device=router_fisica, details=['10.6.140.0', '255.255.255.0', '0.0.0.0', '1']
+time=166, instruction=route_add, device=router_fisica, details=['0.0.0.0', '0.0.0.0', '10.6.100.139', '2']
+time=170, instruction=create, device=router, name=router_uh
+time=171, instruction=mac, device=router_uh:1, address=2233
+time=172, instruction=mac, device=router_uh:2, address=2244
+time=173, instruction=mac, device=router_uh:3, address=2255
+time=174, instruction=ip, device=router_uh:1, address=10.6.100.121, mask=255.255.255.0
+time=175, instruction=ip, device=router_uh:2, address=10.6.100.139, mask=255.255.255.0
+time=176, instruction=ip, device=router_uh:3, address=200.55.132.180, mask=255.255.255.0
+time=177, instruction=route_add, device=router_uh, details=['10.6.122.0', '255.255.255.0', '10.6.100.122', '1']
+time=178, instruction=route_add, device=router_uh, details=['10.6.124.0', '255.255.255.0', '10.6.100.122', '1']
+time=179, instruction=route_add, device=router_uh, details=['10.6.140.0', '255.255.255.0', '10.6.100.140', '2']
+time=180, instruction=route_add, device=router_uh, details=['0.0.0.0', '0.0.0.0', '200.55.132.179', '3']
+time=190, instruction=create, device=router, name=router_etecsa
+time=191, instruction=mac, device=router_etecsa:1, address=3344
+time=192, instruction=ip, device=router_etecsa:1, address=200.55.132.179, mask=255.255.255.0
+time=193, instruction=route_add, device=router_etecsa, details=['200.55.132.180', '255.255.255.255', '200.55.132.180', '1']
+time=200, instruction=connect, device_x=yuri, port_x=1, device_y=hub_redes, port_y=1
+time=210, instruction=connect, device_x=mari, port_x=1, device_y=hub_redes, port_y=2
+time=220, instruction=connect, device_x=abel, port_x=1, device_y=switch_redes, port_y=1
+time=230, instruction=connect, device_x=yeni, port_x=1, device_y=switch_redes, port_y=2
+time=240, instruction=connect, device_x=hub_redes, port_x=3, device_y=switch_redes, port_y=3
+time=250, instruction=connect, device_x=tamayo, port_x=1, device_y=hub_weboo, port_y=1
+time=260, instruction=connect, device_x=thaisel, port_x=1, device_y=hub_weboo, port_y=2
+time=270, instruction=connect, device_x=jean, port_x=1, device_y=switch_weboo, port_y=1
+time=280, instruction=connect, device_x=hub_weboo, port_x=3, device_y=switch_weboo, port_y=2
+time=290, instruction=connect, device_x=alejandro, port_x=1, device_y=switch_fisica, port_y=1
+time=300, instruction=connect, device_x=reynaldo, port_x=1, device_y=switch_fisica, port_y=2
+time=310, instruction=connect, device_x=switch_redes, port_x=4, device_y=router_matcom, port_y=1
+time=320, instruction=connect, device_x=switch_weboo, port_x=3, device_y=router_matcom, port_y=2
+time=330, instruction=connect, device_x=switch_fisica, port_x=3, device_y=router_fisica, port_y=1
+time=340, instruction=connect, device_x=router_matcom, port_x=3, device_y=router_uh, port_y=1
+time=350, instruction=connect, device_x=router_fisica, port_x=2, device_y=router_uh, port_y=2
+time=360, instruction=connect, device_x=router_uh, port_x=3, device_y=router_etecsa, port_y=1
+time=400, instruction=send_packet, host=tamayo, destination_ip=10.6.124.60, data=1111
+time=4700, instruction=send_packet, host=jean, destination_ip=10.6.124.50, data=2222
+time=9000, instruction=send_packet, host=thaisel, destination_ip=10.6.124.70, data=3333
+time=14000, instruction=send_packet, host=yeni, destination_ip=10.6.124.70, data=4444
+time=23400, instruction=send_packet, host=yuri, destination_ip=10.6.140.10, data=5555
+time=41200, instruction=send_packet, host=reynaldo, destination_ip=10.6.122.20, data=6666
+time=59000, instruction=ping, host=abel, destination_ip=10.6.122.1
+time=67500, instruction=ping, host=router_uh, destination_ip=200.55.132.179
+time=76000, instruction=send_packet, host=alejandro, destination_ip=200.55.132.170, data=7777

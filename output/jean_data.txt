@@ -1,0 +1,12 @@
+time=1820, host_mac=BB01, data=0A1B191A0A067C3C, state=OK
+
+time=7560, host_mac=BB01, data=0A1B191B0A067C32, state=OK
+
+time=10820, host_mac=BB02, data=0A1B191A0A067C46, state=OK
+
+time=14080, host_mac=BB02, data=0A067C460A067C3C0000023333, state=OK
+
+time=20100, host_mac=0022, data=0A1B191A0A067C46, state=OK
+
+time=23350, host_mac=0022, data=0A067C460A067A280000024444, state=OK
+
