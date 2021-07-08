@@ -18,3 +18,5 @@ time=63960, host_ip=10.6.122.30, port=1, action=PING
 
 time=65570, host_ip=10.6.122.30, port=1, action=PING
 
+time=108820, host_ip=10.6.122.20, port=1, data=8888, state=OK
+

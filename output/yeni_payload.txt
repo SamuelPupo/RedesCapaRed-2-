@@ -1,2 +1,12 @@
 time=16850, host_ip=10.6.122.1, action=ARPR
 
+time=80960, host_ip=200.55.132.179, action=PING
+
+time=82570, host_ip=200.55.132.179, action=PING
+
+time=84180, host_ip=200.55.132.179, action=PING
+
+time=85790, host_ip=200.55.132.179, action=PING
+
+time=108820, host_ip=10.6.122.20, data=8888, state=OK
+

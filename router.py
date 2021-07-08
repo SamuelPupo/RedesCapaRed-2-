@@ -1,6 +1,6 @@
 from sortedcontainers.sortedset import SortedSet
 
-from host import Host, Device, Data, Route
+from host import Host, Device, Data, icmp_, Route
 
 
 class RouterPort(Host):
@@ -101,7 +101,11 @@ class Router(Device):
         for route in self.routes:
             and_ = tuple([destination_ip[i] & route.mask[i] for i in range(len(destination_ip))])
             if and_ == route.destination:
-                self.ports[route.interface].packet(time, data, destination_ip, origen_ip)
+                port = self.ports[route.interface]
+                if data[8:16] == icmp_:
+                    port.start_send(time, port.binary_ip(destination_ip) + port.binary_ip(origen_ip) + data)
+                else:
+                    port.packet(time, data, destination_ip, origen_ip)
                 return True
         return False
 
@@ -135,8 +139,7 @@ class Router(Device):
         if interface < 0 or interface >= self.ports_number:
             print("\nWRONG PING INTERFACE.")
             raise Exception
-        for i in range(4):
-            self.ports[interface].icmp(time + 100 * i, destination_ip, 8)
+        self.ports[interface].echo_request(time, 0, destination_ip)
 
     def routes_add(self, route: Route):
         self.routes.add(route)

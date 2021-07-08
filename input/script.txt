@@ -174,5 +174,8 @@
 
 59000 ping abel 10.6.122.1
 67500 ping router_uh:3 200.55.132.179
+76000 ping router_etecsa:1 10.6.122.40
 
-76000 send_packet alejandro 200.55.132.170 7777
+91000 send_packet alejandro 200.55.132.170 7777
+
+107000 send_packet mari 10.6.122.255 8888

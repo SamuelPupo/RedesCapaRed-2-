@@ -2,7 +2,7 @@ time=37970, host_ip=0.0.0.0, action=ARPQ
 
 time=41220, host_ip=10.6.122.10, data=5555, state=OK
 
-time=78850, host_ip=10.6.140.1, action=ARPR
+time=93850, host_ip=10.6.140.1, action=ARPR
 
-time=91510, host_ip=200.55.132.170, action=DHU
+time=106510, host_ip=200.55.132.170, action=DHU
 

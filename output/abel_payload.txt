@@ -6,3 +6,5 @@ time=65710, host_ip=10.6.122.1, action=PONG
 
 time=67320, host_ip=10.6.122.1, action=PONG
 
+time=108820, host_ip=10.6.122.20, data=8888, state=OK
+

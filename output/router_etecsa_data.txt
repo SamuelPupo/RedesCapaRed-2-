@@ -6,7 +6,15 @@ time=72320, host_mac=2255, port=1, data=C83784B3C83784B400010108, state=OK
 
 time=73930, host_mac=2255, port=1, data=C83784B3C83784B400010108, state=OK
 
-time=83610, host_mac=2255, port=1, data=0A1B191AC83784B3, state=OK
+time=85880, host_mac=2255, port=1, data=C83784B30A067A2800010100, state=OK
 
-time=86560, host_mac=2255, port=1, data=C83784AA0A068C0A0000027777, state=OK
+time=87490, host_mac=2255, port=1, data=C83784B30A067A2800010100, state=OK
+
+time=89100, host_mac=2255, port=1, data=C83784B30A067A2800010100, state=OK
+
+time=90710, host_mac=2255, port=1, data=C83784B30A067A2800010100, state=OK
+
+time=98610, host_mac=2255, port=1, data=0A1B191AC83784B3, state=OK
+
+time=101560, host_mac=2255, port=1, data=C83784AA0A068C0A0000027777, state=OK
 

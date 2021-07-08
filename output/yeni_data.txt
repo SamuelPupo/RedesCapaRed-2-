@@ -10,3 +10,13 @@ time=62350, host_mac=AA03, data=0A067A010A067A1E00010108, state=OK
 
 time=67320, host_mac=0011, data=0A067A1E0A067A0100010100, state=OK
 
+time=80960, host_mac=0011, data=0A067A28C83784B300010108, state=OK
+
+time=82570, host_mac=0011, data=0A067A28C83784B300010108, state=OK
+
+time=84180, host_mac=0011, data=0A067A28C83784B300010108, state=OK
+
+time=85790, host_mac=0011, data=0A067A28C83784B300010108, state=OK
+
+time=108820, host_mac=AA02, data=0A067AFF0A067A140000028888, state=OK
+

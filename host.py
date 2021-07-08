@@ -129,7 +129,7 @@ class Host(Device):
                     self.arp(time, data, str(sender))
                 elif len(data) >= 88:
                     destination_ip = self.tuple_ip(data[:32])
-                    if self.ip == destination_ip:
+                    if self.ip == destination_ip or self.broadcast == destination_ip:
                         self.protocol(time, data)
                     elif destination != "FFFF" or data[72:80] == icmp_:
                         self.ignore(destination_ip, self.tuple_ip(data[32:64]), data[64:])
@@ -213,7 +213,7 @@ class Host(Device):
                 if gateway == (0, 0, 0, 0):
                     gateway = destination_ip
                 try:
-                    destination_mac = hexadecimal_to_binary(self.table[gateway])
+                    destination_mac = hexadecimal_to_binary(self.table[gateway]) if gateway != self.broadcast else None
                 except Exception:
                     self.waiting_packet.append((gateway, destination_ip, origen_ip, data))
                     self.start_send(time, arpq_ + self.binary_ip(gateway))
@@ -326,8 +326,7 @@ class Host(Device):
         protocol = icmp_
         length = decimal_to_binary(1)
         data = decimal_to_binary(payload)
-        self.start_send(time, binary_destination_ip + origen_ip + ttl + protocol + length + data,
-                        [1 for _ in range(16)])
+        self.start_send(time, binary_destination_ip + origen_ip + ttl + protocol + length + data)
 
     def echo_reply(self, time: int, destination_ip: tuple):
         self.icmp(time, destination_ip, 0)

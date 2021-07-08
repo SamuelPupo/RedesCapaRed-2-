@@ -30,3 +30,21 @@ time=63960, host_mac=AA03, port=1, data=0A067A010A067A1E00010108, state=OK
 
 time=65570, host_mac=AA03, port=1, data=0A067A010A067A1E00010108, state=OK
 
+time=79200, host_mac=2233, port=3, data=0A067A28C83784B300010108, state=OK
+
+time=80810, host_mac=2233, port=3, data=0A067A28C83784B300010108, state=OK
+
+time=82420, host_mac=2233, port=3, data=0A067A28C83784B300010108, state=OK
+
+time=82700, host_mac=AA04, port=1, data=C83784B30A067A2800010100, state=OK
+
+time=84030, host_mac=2233, port=3, data=0A067A28C83784B300010108, state=OK
+
+time=84310, host_mac=AA04, port=1, data=C83784B30A067A2800010100, state=OK
+
+time=85920, host_mac=AA04, port=1, data=C83784B30A067A2800010100, state=OK
+
+time=87530, host_mac=AA04, port=1, data=C83784B30A067A2800010100, state=OK
+
+time=108820, host_mac=AA02, port=1, data=0A067AFF0A067A140000028888, state=OK
+

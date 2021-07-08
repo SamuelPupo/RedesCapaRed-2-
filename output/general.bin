@@ -105,4 +105,6 @@ time=23400, instruction=send_packet, host=yuri, destination_ip=10.6.140.10, data
 time=41200, instruction=send_packet, host=reynaldo, destination_ip=10.6.122.20, data=6666
 time=59000, instruction=ping, host=abel, destination_ip=10.6.122.1
 time=67500, instruction=ping, host=router_uh, destination_ip=200.55.132.179
-time=76000, instruction=send_packet, host=alejandro, destination_ip=200.55.132.170, data=7777
+time=76000, instruction=ping, host=router_etecsa, destination_ip=10.6.122.40
+time=91000, instruction=send_packet, host=alejandro, destination_ip=200.55.132.170, data=7777
+time=107000, instruction=send_packet, host=mari, destination_ip=10.6.122.255, data=8888

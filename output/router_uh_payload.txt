@@ -14,5 +14,5 @@ time=73910, host_ip=200.55.132.179, port=3, action=PONG
 
 time=75520, host_ip=200.55.132.179, port=3, action=PONG
 
-time=84880, host_ip=200.55.132.179, port=3, action=ARPR
+time=99880, host_ip=200.55.132.179, port=3, action=ARPR
 
